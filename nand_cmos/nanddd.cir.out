@@ -1,0 +1,26 @@
+* c:\users\lenovo\esim-workspace\nanddd\nanddd.cir
+
+.include PMOS-180nm.lib
+.include NMOS-180nm.lib
+m2 vout ain net-_m2-pad3_ gnd CMOSN W=100u L=100u M=1
+m1 net-_m1-pad1_ ain vout net-_m1-pad1_ CMOSP W=100u L=100u M=1
+v3 net-_m1-pad1_ gnd  dc 5
+m3 net-_m2-pad3_ bin gnd gnd CMOSN W=100u L=100u M=1
+v2  bin gnd pulse(0 5 0 5n 5n 20m 40m)
+v1  ain gnd pulse(0 5 0 5n 5n 40m 80m)
+m4 net-_m1-pad1_ bin vout net-_m1-pad1_ CMOSP W=100u L=100u M=1
+* u1  ain plot_v1
+* u2  bin plot_v1
+* u3  vout plot_v1
+.tran 1e-03 160e-03 0e-09
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(ain)
+plot v(bin)
+plot v(vout)
+.endc
+.end

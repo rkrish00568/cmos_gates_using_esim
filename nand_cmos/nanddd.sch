@@ -1,0 +1,285 @@
+EESchema Schematic File Version 2
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:power
+LIBS:eSim_Plot
+LIBS:transistors
+LIBS:conn
+LIBS:eSim_User
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:eSim_Analog
+LIBS:eSim_Devices
+LIBS:eSim_Digital
+LIBS:eSim_Hybrid
+LIBS:eSim_Miscellaneous
+LIBS:eSim_Power
+LIBS:eSim_Sources
+LIBS:eSim_Subckt
+LIBS:eSim_Nghdl
+LIBS:eSim_Ngveri
+LIBS:eSim_SKY130
+LIBS:eSim_SKY130_Subckts
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L eSim_MOS_N M2
+U 1 1 67A76955
+P 6400 3550
+F 0 "M2" H 6400 3400 50  0000 R CNN
+F 1 "eSim_MOS_N" H 6500 3500 50  0000 R CNN
+F 2 "" H 6700 3250 29  0000 C CNN
+F 3 "" H 6500 3350 60  0000 C CNN
+	1    6400 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L eSim_MOS_P M1
+U 1 1 67A7698E
+P 5550 2800
+F 0 "M1" H 5500 2850 50  0000 R CNN
+F 1 "eSim_MOS_P" H 5600 2950 50  0000 R CNN
+F 2 "" H 5800 2900 29  0000 C CNN
+F 3 "" H 5600 2800 60  0000 C CNN
+	1    5550 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L DC v3
+U 1 1 67A769CD
+P 8450 3450
+F 0 "v3" H 8250 3550 60  0000 C CNN
+F 1 "DC" H 8250 3400 60  0000 C CNN
+F 2 "R1" H 8150 3450 60  0000 C CNN
+F 3 "" H 8450 3450 60  0000 C CNN
+	1    8450 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L eSim_MOS_N M3
+U 1 1 67A76A91
+P 6400 4100
+F 0 "M3" H 6400 3950 50  0000 R CNN
+F 1 "eSim_MOS_N" H 6500 4050 50  0000 R CNN
+F 2 "" H 6700 3800 29  0000 C CNN
+F 3 "" H 6500 3900 60  0000 C CNN
+	1    6400 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 3950 6600 4100
+$Comp
+L GND #PWR01
+U 1 1 67A76B6D
+P 6600 4700
+F 0 "#PWR01" H 6600 4450 50  0001 C CNN
+F 1 "GND" H 6600 4550 50  0000 C CNN
+F 2 "" H 6600 4700 50  0001 C CNN
+F 3 "" H 6600 4700 50  0001 C CNN
+	1    6600 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 4500 6600 4700
+Wire Wire Line
+	6700 4450 6700 4600
+Wire Wire Line
+	6450 4600 6850 4600
+Connection ~ 6600 4600
+Wire Wire Line
+	6700 3900 6700 4200
+Wire Wire Line
+	6700 4200 6850 4200
+Wire Wire Line
+	6850 4200 6850 4600
+Connection ~ 6700 4600
+$Comp
+L pulse v2
+U 1 1 67A76C3D
+P 5000 4750
+F 0 "v2" H 4800 4850 60  0000 C CNN
+F 1 "pulse" H 4800 4700 60  0000 C CNN
+F 2 "R1" H 4700 4750 60  0000 C CNN
+F 3 "" H 5000 4750 60  0000 C CNN
+	1    5000 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L pulse v1
+U 1 1 67A76C71
+P 4350 3850
+F 0 "v1" H 4150 3950 60  0000 C CNN
+F 1 "pulse" H 4150 3800 60  0000 C CNN
+F 2 "R1" H 4050 3850 60  0000 C CNN
+F 3 "" H 4350 3850 60  0000 C CNN
+	1    4350 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L eSim_MOS_P M4
+U 1 1 67A76D03
+P 7200 2750
+F 0 "M4" H 7150 2800 50  0000 R CNN
+F 1 "eSim_MOS_P" H 7250 2900 50  0000 R CNN
+F 2 "" H 7450 2850 29  0000 C CNN
+F 3 "" H 7250 2750 60  0000 C CNN
+	1    7200 2750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 3000 7050 3000
+Wire Wire Line
+	7050 3000 7050 2950
+Wire Wire Line
+	6600 3550 6600 3000
+Connection ~ 6600 3000
+Wire Wire Line
+	5400 2800 5400 3750
+Wire Wire Line
+	5400 3750 6300 3750
+Wire Wire Line
+	5000 4300 6300 4300
+Wire Wire Line
+	4350 3400 5400 3400
+Connection ~ 5400 3400
+Wire Wire Line
+	5000 5200 6450 5200
+Wire Wire Line
+	6450 5200 6450 4600
+Wire Wire Line
+	4350 4300 4350 5300
+Wire Wire Line
+	4350 5300 5150 5300
+Wire Wire Line
+	5150 5300 5150 5200
+Connection ~ 5150 5200
+Wire Wire Line
+	5700 2600 6950 2600
+Wire Wire Line
+	6950 2600 6950 2550
+Wire Wire Line
+	6950 2550 7050 2550
+Wire Wire Line
+	6850 4550 8450 4550
+Wire Wire Line
+	8450 4550 8450 3900
+Connection ~ 6850 4550
+Wire Wire Line
+	8450 3000 8450 2200
+Wire Wire Line
+	8450 2200 6550 2200
+Wire Wire Line
+	6550 2200 6550 2600
+Connection ~ 6550 2600
+Wire Wire Line
+	6950 2900 6700 2900
+Wire Wire Line
+	6700 2900 6700 2600
+Connection ~ 6700 2600
+Wire Wire Line
+	5800 2950 6100 2950
+Wire Wire Line
+	6100 2950 6100 2600
+Connection ~ 6100 2600
+Wire Wire Line
+	7350 2750 7350 5350
+Wire Wire Line
+	7350 5350 5800 5350
+Wire Wire Line
+	5800 5350 5800 4300
+Connection ~ 5800 4300
+Text GLabel 4500 3200 0    60   Input ~ 0
+Ain
+Text GLabel 5100 4000 0    60   Input ~ 0
+Bin
+Text GLabel 7650 3450 2    60   Input ~ 0
+Vout
+Wire Wire Line
+	7650 3450 6600 3450
+Connection ~ 6600 3450
+Wire Wire Line
+	5100 4000 5500 4000
+Wire Wire Line
+	5500 4000 5500 4300
+Connection ~ 5500 4300
+Wire Wire Line
+	4500 3200 4900 3200
+Wire Wire Line
+	4700 3200 4700 3400
+Connection ~ 4700 3400
+$Comp
+L plot_v1 U1
+U 1 1 67A77845
+P 4900 3300
+F 0 "U1" H 4900 3800 60  0000 C CNN
+F 1 "plot_v1" H 5100 3650 60  0000 C CNN
+F 2 "" H 4900 3300 60  0000 C CNN
+F 3 "" H 4900 3300 60  0000 C CNN
+	1    4900 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L plot_v1 U2
+U 1 1 67A778B6
+P 5150 4050
+F 0 "U2" H 5150 4550 60  0000 C CNN
+F 1 "plot_v1" H 5350 4400 60  0000 C CNN
+F 2 "" H 5150 4050 60  0000 C CNN
+F 3 "" H 5150 4050 60  0000 C CNN
+	1    5150 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L plot_v1 U3
+U 1 1 67A778F5
+P 7600 4250
+F 0 "U3" H 7600 4750 60  0000 C CNN
+F 1 "plot_v1" H 7800 4600 60  0000 C CNN
+F 2 "" H 7600 4250 60  0000 C CNN
+F 3 "" H 7600 4250 60  0000 C CNN
+	1    7600 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 4050 7050 4050
+Wire Wire Line
+	7050 4050 7050 3450
+Connection ~ 7050 3450
+Wire Wire Line
+	5150 3850 5150 4000
+Connection ~ 5150 4000
+Wire Wire Line
+	4900 3200 4900 3100
+Connection ~ 4700 3200
+$EndSCHEMATC
