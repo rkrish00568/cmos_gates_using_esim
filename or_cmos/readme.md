@@ -1,1 +1,1 @@
-Or_cmos
+Or__with_nand
