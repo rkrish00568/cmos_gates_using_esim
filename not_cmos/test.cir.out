@@ -1,0 +1,25 @@
+* c:\users\lenovo\esim-workspace\test\test.cir
+
+.include PMOS-180nm.lib
+.include NMOS-180nm.lib
+
+m1 out in gnd gnd CMOSN W=100u L=100u M=1
+m2 net-_m2-pad1_ in out net-_m2-pad1_ CMOSP W=100u L=100u M=1
+
+v2 net-_m2-pad1_ gnd  dc 5
+v1  in gnd pulse(0 5 0 1n 1n 5u 10u)
+
+.tran 1e-06 50e-06 0e-09
+
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(in)
+plot v(out)
+
+
+.endc
+.end
