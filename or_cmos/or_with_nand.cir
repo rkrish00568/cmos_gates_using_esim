@@ -1,0 +1,20 @@
+* C:\Users\Lenovo\eSim-Workspace\or_with_nand\or_with_nand.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 02/27/25 11:53:50
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+U6  Net-_U4-Pad3_ Net-_U5-Pad3_ Net-_U6-Pad3_ d_nand		
+U4  Net-_U3-Pad3_ Net-_U3-Pad3_ Net-_U4-Pad3_ d_nand		
+U5  Net-_U3-Pad4_ Net-_U3-Pad4_ Net-_U5-Pad3_ d_nand		
+v1  in1 GND pulse		
+U7  Net-_U6-Pad3_ out dac_bridge_1		
+U3  in1 in2 Net-_U3-Pad3_ Net-_U3-Pad4_ adc_bridge_2		
+v2  in2 GND pulse		
+U8  out plot_v1		
+U1  in1 plot_v1		
+U2  in2 plot_v1		
+
+.end
