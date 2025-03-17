@@ -1,0 +1,22 @@
+* C:\Users\Lenovo\eSim-Workspace\and_gate\and_gate.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 02/05/25 11:28:40
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+M3  Net-_M2-Pad3_ Bin GND GND mosfet_n		
+M1  Net-_M1-Pad1_ Ain Net-_M1-Pad3_ Net-_M1-Pad1_ mosfet_p		
+M4  Net-_M1-Pad1_ Bin Net-_M1-Pad3_ Net-_M1-Pad1_ mosfet_p		
+M6  Net-_M1-Pad1_ Net-_M1-Pad3_ Out Net-_M1-Pad1_ mosfet_p		
+M2  Net-_M1-Pad3_ Ain Net-_M2-Pad3_ Net-_M2-Pad3_ mosfet_n		
+M5  Out Net-_M1-Pad3_ GND GND mosfet_n		
+v3  Net-_M1-Pad1_ GND DC		
+U1  Ain plot_v1		
+U2  Bin plot_v1		
+U3  Out plot_v1		
+v2  Bin GND pulse		
+v1  Ain GND pulse		
+
+.end
