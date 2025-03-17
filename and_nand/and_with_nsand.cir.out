@@ -1,0 +1,35 @@
+* c:\users\lenovo\esim-workspace\and_with_nsand\and_with_nsand.cir
+
+* u4  net-_u3-pad3_ net-_u3-pad4_ net-_u4-pad3_ d_nand
+* u5  net-_u4-pad3_ net-_u4-pad3_ net-_u5-pad3_ d_nand
+v1  in1 gnd pulse(0 5 0 5n 5n 40m 80m)
+* u3  in1 in2 net-_u3-pad3_ net-_u3-pad4_ adc_bridge_2
+* u6  net-_u5-pad3_ out dac_bridge_1
+v2  in2 gnd pulse(0 5 0 5n 5n 20m 40m)
+* u7  out plot_v1
+* u1  in1 plot_v1
+* u2  in2 plot_v1
+a1 [net-_u3-pad3_ net-_u3-pad4_ ] net-_u4-pad3_ u4
+a2 [net-_u4-pad3_ net-_u4-pad3_ ] net-_u5-pad3_ u5
+a3 [in1 in2 ] [net-_u3-pad3_ net-_u3-pad4_ ] u3
+a4 [net-_u5-pad3_ ] [out ] u6
+* Schematic Name:                             d_nand, NgSpice Name: d_nand
+.model u4 d_nand(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 ) 
+* Schematic Name:                             d_nand, NgSpice Name: d_nand
+.model u5 d_nand(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 ) 
+* Schematic Name:                             adc_bridge_2, NgSpice Name: adc_bridge
+.model u3 adc_bridge(in_low=1.0 in_high=2.0 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             dac_bridge_1, NgSpice Name: dac_bridge
+.model u6 dac_bridge(out_low=0.0 out_high=5.0 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+.tran 1e-03 160e-03 0e-09
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(out)
+plot v(in1)
+plot v(in2)
+.endc
+.end

@@ -1,0 +1,218 @@
+EESchema Schematic File Version 2
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:power
+LIBS:eSim_Plot
+LIBS:transistors
+LIBS:conn
+LIBS:eSim_User
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:eSim_Analog
+LIBS:eSim_Devices
+LIBS:eSim_Digital
+LIBS:eSim_Hybrid
+LIBS:eSim_Miscellaneous
+LIBS:eSim_Power
+LIBS:eSim_Sources
+LIBS:eSim_Subckt
+LIBS:eSim_Nghdl
+LIBS:eSim_Ngveri
+LIBS:eSim_SKY130
+LIBS:eSim_SKY130_Subckts
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L d_nand U?
+U 1 1 67C000DE
+P 5400 2650
+F 0 "U?" H 5400 2650 60  0000 C CNN
+F 1 "d_nand" H 5450 2750 60  0000 C CNN
+F 2 "" H 5400 2650 60  0000 C CNN
+F 3 "" H 5400 2650 60  0000 C CNN
+	1    5400 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L d_nand U?
+U 1 1 67C0012B
+P 6700 2650
+F 0 "U?" H 6700 2650 60  0000 C CNN
+F 1 "d_nand" H 6750 2750 60  0000 C CNN
+F 2 "" H 6700 2650 60  0000 C CNN
+F 3 "" H 6700 2650 60  0000 C CNN
+	1    6700 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 67C00152
+P 3250 4100
+F 0 "#PWR?" H 3250 3850 50  0001 C CNN
+F 1 "GND" H 3250 3950 50  0000 C CNN
+F 2 "" H 3250 4100 50  0001 C CNN
+F 3 "" H 3250 4100 50  0001 C CNN
+	1    3250 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L pulse v?
+U 1 1 67C0016A
+P 2900 3450
+F 0 "v?" H 2700 3550 60  0000 C CNN
+F 1 "pulse" H 2700 3400 60  0000 C CNN
+F 2 "R1" H 2600 3450 60  0000 C CNN
+F 3 "" H 2900 3450 60  0000 C CNN
+	1    2900 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L adc_bridge_2 U?
+U 1 1 67C001D4
+P 4250 2600
+F 0 "U?" H 4250 2600 60  0000 C CNN
+F 1 "adc_bridge_2" H 4250 2750 60  0000 C CNN
+F 2 "" H 4250 2600 60  0000 C CNN
+F 3 "" H 4250 2600 60  0000 C CNN
+	1    4250 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L dac_bridge_1 U?
+U 1 1 67C001FF
+P 8000 2650
+F 0 "U?" H 8000 2650 60  0000 C CNN
+F 1 "dac_bridge_1" H 8000 2800 60  0000 C CNN
+F 2 "" H 8000 2650 60  0000 C CNN
+F 3 "" H 8000 2650 60  0000 C CNN
+	1    8000 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L pulse v?
+U 1 1 67C002CE
+P 3350 3450
+F 0 "v?" H 3150 3550 60  0000 C CNN
+F 1 "pulse" H 3150 3400 60  0000 C CNN
+F 2 "R1" H 3050 3450 60  0000 C CNN
+F 3 "" H 3350 3450 60  0000 C CNN
+	1    3350 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 3900 3350 3900
+Wire Wire Line
+	3250 4100 3250 3900
+Connection ~ 3250 3900
+Wire Wire Line
+	2900 2300 2900 3000
+Wire Wire Line
+	2900 2550 3650 2550
+Wire Wire Line
+	3350 3000 3350 2650
+Wire Wire Line
+	3350 2650 3650 2650
+Wire Wire Line
+	4800 2550 4950 2550
+Wire Wire Line
+	4800 2650 4950 2650
+Wire Wire Line
+	6250 2550 6250 2650
+Wire Wire Line
+	5850 2600 6250 2600
+Connection ~ 6250 2600
+Wire Wire Line
+	7150 2600 7400 2600
+$Comp
+L plot_v1 U?
+U 1 1 67C00413
+P 8850 2600
+F 0 "U?" H 8850 3100 60  0000 C CNN
+F 1 "plot_v1" H 9050 2950 60  0000 C CNN
+F 2 "" H 8850 2600 60  0000 C CNN
+F 3 "" H 8850 2600 60  0000 C CNN
+	1    8850 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 2600 8850 2600
+Wire Wire Line
+	8850 2400 8850 2700
+Text GLabel 9050 2700 2    60   Input ~ 0
+out
+Wire Wire Line
+	8850 2700 9050 2700
+Connection ~ 8850 2600
+Text GLabel 2550 2300 0    60   Input ~ 0
+in1
+Text GLabel 3650 3000 3    60   Input ~ 0
+in2
+Wire Wire Line
+	2550 2300 2900 2300
+Connection ~ 2900 2550
+Wire Wire Line
+	3650 2650 3650 3000
+$Comp
+L plot_v1 U?
+U 1 1 67C00626
+P 3250 2600
+F 0 "U?" H 3250 3100 60  0000 C CNN
+F 1 "plot_v1" H 3450 2950 60  0000 C CNN
+F 2 "" H 3250 2600 60  0000 C CNN
+F 3 "" H 3250 2600 60  0000 C CNN
+	1    3250 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 2400 3250 2550
+Connection ~ 3250 2550
+$Comp
+L plot_v1 U?
+U 1 1 67C006D9
+P 3950 3550
+F 0 "U?" H 3950 4050 60  0000 C CNN
+F 1 "plot_v1" H 4150 3900 60  0000 C CNN
+F 2 "" H 3950 3550 60  0000 C CNN
+F 3 "" H 3950 3550 60  0000 C CNN
+	1    3950 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 3350 3750 3350
+Wire Wire Line
+	3750 3350 3750 2800
+Wire Wire Line
+	3750 2800 3650 2800
+Connection ~ 3650 2800
+$EndSCHEMATC
