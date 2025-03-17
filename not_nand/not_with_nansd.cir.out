@@ -1,0 +1,28 @@
+* c:\users\lenovo\esim-workspace\or_with_nansd\or_with_nansd.cir
+
+* u2  net-_u2-pad1_ net-_u2-pad1_ net-_u2-pad3_ d_nand
+v1  in gnd pulse(0 5 0 5n 5n 40m 80m)
+* u3  out plot_v1
+* u1  in plot_v1
+* u4  in net-_u2-pad1_ adc_bridge_1
+* u5  net-_u2-pad3_ out dac_bridge_1
+a1 [net-_u2-pad1_ net-_u2-pad1_ ] net-_u2-pad3_ u2
+a2 [in ] [net-_u2-pad1_ ] u4
+a3 [net-_u2-pad3_ ] [out ] u5
+* Schematic Name:                             d_nand, NgSpice Name: d_nand
+.model u2 d_nand(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 ) 
+* Schematic Name:                             adc_bridge_1, NgSpice Name: adc_bridge
+.model u4 adc_bridge(in_low=1.0 in_high=2.0 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             dac_bridge_1, NgSpice Name: dac_bridge
+.model u5 dac_bridge(out_low=0.0 out_high=5.0 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+.tran 1e-03 160e-03 0e-09
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(out)
+plot v(in)
+.endc
+.end
